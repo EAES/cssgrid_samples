@@ -82,6 +82,33 @@
   </style>
 
   <script>
+    const gallery = document.querySelector('.gallery');
+    const overlay = document.querySelector('.overlay');
+    const overlayImage = overlay.querySelector('img');
+    const overlayClose = overlay.querySelector('.close');
+
+    function generateHTML([h, v]) {
+      return `
+        <div class="item h${h} v${v}">
+          <img src="https://source.unsplash.com/collection/1111575/480x480/?sig=${randomNumber(284)}">
+          <div class="item-overlay">
+            <button>View ></button>
+          </div>
+        </div>
+      `;
+    }
+
+    function randomNumber(limit) {
+      return Math.floor(Math.random() * limit) + 1;
+    }
+    const digits = Array.from({length:50}, ()=> [randomNumber(4), randomNumber(4)]);
+
+
+    const html = digits.map(generateHTML).join('');
+    // console.log(html);
+
+    gallery.innerHTML = html;
+
   </script>
 </body>
 
