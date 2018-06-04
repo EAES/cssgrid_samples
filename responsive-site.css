@@ -19,3 +19,22 @@ img {
     "hero hero cta2";
 }
 
+.top .hero {
+  grid-area: hero;
+  min-height: 400px;
+  background: white url(images/taco.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
+}
+
+
+.top .cta1 {
+  grid-area: cta1;
+}
+
+
+.top .cta2 {
+  grid-area: cta2;
+}
